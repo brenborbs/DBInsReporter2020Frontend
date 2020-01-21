@@ -1,13 +1,122 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn {
+  border-radius: 0px !important;
+}
+.a-custom {
+  color: black !important;
+}
+.e-cust {
+  border-color: white !important;
+  color: white !important;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px !important;
+}
+.e-cust:hover {
+  border-color: white !important;
+  background-color: white !important;
+  color: black !important;
+}
+.text-db {
+  color: #23395d;
+}
+.navbar,
+.btn-primary {
+  background-color: #23395d !important;
+  border-color: #23395d !important ;
+}
+.h2-cust {
+  color: #23395d;
+}
+.navbar-brand {
+  text-transform: uppercase !important;
+}
+.t-cust {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+body {
+  background-color: #f8f9fa !important;
+  font-family: "Karla", sans-serif !important;
+}
+img {
+  width: 60%;
+}
+.img-container {
+  text-align: center;
+  margin: 20px;
+}
+.report-wrapper {
+  /* border: 1px solid black; */
+  width: 1100px;
+  padding: 30px;
+  margin: 2em;
+  background-color: white;
+}
+.text-center {
+  text-transform: uppercase;
+}
+.pre-title {
+  text-align: center;
+}
+.title-report {
+  display: inline-block;
+}
+.control-wrapper {
+  margin-top: 5em;
+}
+.fa {
+  font-size: 18px;
+  margin-right: 5px;
+  color: #d33821;
+}
+.title-wrapper {
+  text-align: center;
+}
+.form-container {
+  margin: 0 auto;
+  width: 90%;
+}
+.detail-img {
+  width: 50%;
+}
+.profile-wrapper {
+  margin: 6em;
+}
+.back-btn {
+  margin-top: 5em;
+}
+.home-wrapper,
+.search-wrapper {
+  margin: 5em 0em 5em 0em;
+}
+.form-text-label {
+  text-align: center;
+  text-transform: uppercase;
+}
+.label-ui {
+  text-align: center;
+}
+.table {
+  font-size: 14px;
+}
+.form-row,
+.form-control,
+.input-group-text {
+  font-size: 14px;
+}
+.signin-wrapper {
+  border-radius: 5px;
+  padding: 30px;
+  margin: 150px;
+  background-color: white;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+}
+.signin-title {
+  text-align: center;
 }
