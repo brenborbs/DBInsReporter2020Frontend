@@ -32,7 +32,7 @@
   color: #23395d;
 }
 .navbar-brand {
-  text-transform: uppercase !important;
+  font-family: "Monoton", cursive;
 }
 .t-cust {
   text-transform: uppercase;

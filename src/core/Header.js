@@ -40,7 +40,7 @@ const Header = ({ history }) => {
             aria-hidden="true"
             style={{ fontSize: "20px" }}
           ></i>
-          DB Reporter
+          My reports
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

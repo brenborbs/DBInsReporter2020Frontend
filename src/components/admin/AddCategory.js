@@ -3,6 +3,7 @@ import Layout from "../../core/Layout";
 import { isAuthenticated } from "../../actions/authActions";
 import { Link } from "react-router-dom";
 import { createCategory } from "../../actions/adminActions";
+import FormInput from "../../components/form/FormInput";
 
 const AddCategory = () => {
   const [name, setName] = useState("");
@@ -34,17 +35,16 @@ const AddCategory = () => {
 
   const newCategoryFom = () => (
     <form onSubmit={clickSubmit}>
-      <div className="form-group">
-        <label className="text-muted">Name</label>
-        <input
-          type="text"
-          className="form-control"
-          onChange={handleChange}
-          value={name}
-          autoFocus
-          required
-        />
-      </div>
+      <FormInput
+        label="Name"
+        type="text"
+        className="form-control"
+        onChange={handleChange}
+        value={name}
+        autoFocus
+        required
+      />
+
       <button className="btn btn-outline-primary">Create Category</button>
     </form>
   );

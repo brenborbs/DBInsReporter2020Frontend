@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import Layout from "../core/Layout";
 import { signin, authenticate, isAuthenticated } from "../actions/authActions";
+import FormInput from "../components/form/FormInput";
 
 const Signin = () => {
   const [values, setValues] = useState({
@@ -37,27 +38,22 @@ const Signin = () => {
   };
   const signUpForm = () => (
     <form>
-      <div className="form-group">
-        <label>Email address</label>
-        <input
-          onChange={handleChange("email")}
-          type="email"
-          className="form-control"
-          value={email}
-        />
-        <small id="emailHelp" className="form-text text-muted">
-          We'll never share your email with anyone else.
-        </small>
-      </div>
-      <div className="form-group">
-        <label>Password</label>
-        <input
-          onChange={handleChange("password")}
-          type="password"
-          className="form-control"
-          value={password}
-        />
-      </div>
+      <FormInput
+        label="Email address"
+        onChange={handleChange("email")}
+        type="email"
+        className="form-control"
+        value={email}
+      />
+
+      <FormInput
+        label="Password"
+        onChange={handleChange("password")}
+        type="password"
+        className="form-control"
+        value={password}
+      />
+
       <button onClick={clickSubmit} className="btn btn-primary">
         Submit
       </button>

@@ -3,6 +3,7 @@ import Layout from "../core/Layout";
 import { isAuthenticated } from "../actions/authActions";
 import { Redirect, Link } from "react-router-dom";
 import { read, update, updateUser } from "../actions/userActions";
+import FormInput from "../components/form/FormInput";
 
 const Profile = ({ match }) => {
   const [values, setValues] = useState({
@@ -55,7 +56,7 @@ const Profile = ({ match }) => {
 
   const redirectUser = success => {
     if (success) {
-      return <Redirect to="/cart" />;
+      return <Redirect to="/" />;
     }
   };
 
@@ -78,33 +79,29 @@ const Profile = ({ match }) => {
 
   const profileUpdate = (name, email, password) => (
     <form>
-      <div className="form-group">
-        <label className="text-muted">Name</label>
-        <input
-          type="text"
-          onChange={handleChange("name")}
-          className="form-control"
-          value={name}
-        />
-      </div>
-      <div className="form-group">
-        <label className="text-muted">Email</label>
-        <input
-          type="email"
-          onChange={handleChange("email")}
-          className="form-control"
-          value={email}
-        />
-      </div>
-      <div className="form-group">
-        <label className="text-muted">Password</label>
-        <input
-          type="password"
-          onChange={handleChange("password")}
-          className="form-control"
-          value={password}
-        />
-      </div>
+      <FormInput
+        label="Name"
+        type="text"
+        onChange={handleChange("name")}
+        className="form-control"
+        value={name}
+      />
+
+      <FormInput
+        label="Email"
+        type="email"
+        onChange={handleChange("email")}
+        className="form-control"
+        value={email}
+      />
+
+      <FormInput
+        label="Password"
+        type="password"
+        onChange={handleChange("password")}
+        className="form-control"
+        value={password}
+      />
 
       <button onClick={clickSubmit} className="btn btn-primary">
         Submit
